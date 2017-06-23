@@ -3,19 +3,26 @@
 <head>
 <title>Kriselle Tanheco</title>
 </head>
-
 <body>
 
-
 <h1>Kriselle Tanhueco</h1>
+<hr>
 <p>Hi! I'm Kriselle, a 16-year-old student at a small charter school in East San Jose.</p>
 
-<h4>Likes</h4>
-<ol type="i">
+<h4 text-align="center">Likes</h4>
+<ol type="i" text-align:center>
 <li>Rock music</li>
+<li>Mustard Yellow</li>
+<li>Writing</li>
 <li>Fruits and pasta</li>
-
-
+<li>Guitar</li>
+<li>Skateboarding</li>
+</ol>
+<h4 text-align="center">Dislikes</h4>
+<ol type="i" text-align:center>
+<li>Sweets</li>
+<li>Seafood</li>
+<li>The sound of chewing</li>
 
 
 
