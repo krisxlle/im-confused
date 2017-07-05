@@ -53,6 +53,12 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+    
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
+}
 </style>
 </head>
 <body>
@@ -69,7 +75,7 @@ body {
   <a href="#">Contact</a>
 </div>
 
-<div id="main">
+<div class="sidebar" id="main">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 </div>
 
