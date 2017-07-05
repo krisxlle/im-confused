@@ -55,8 +55,7 @@ body {font-family: "Lato", sans-serif;transition: background-color .5s;}
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 </div>-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<div class="container sidebar" onclick="myFunction(this);openNav();closeNav();" id="settings">
+<div class="container sidebar" onclick="myFunction(this);togNav();" id="main">
   <div class="bar1"></div>
   <div class="bar2"></div>
   <div class="bar3"></div>
@@ -99,27 +98,16 @@ function closeNav() {
 function myFunction(x) {
     x.classList.toggle("change");
 }
-    $(function() {
-
-  var elem = $("#settings");
-
-  function openSettings() {
-    elem.is(":hidden") 
-    ? elem.slideDown(function() {
-        $(document).one("click", function(e) {
-          elem.slideUp()
-        })
-      }) 
-    : elem.slideUp();
+function togNav() {
+  var nav = document.getElementById("nav");
+  if (nav.style.width == '200px') {
+    nav.style.width = '0';
+    nav.style.opacity = 0;
+  } else {
+    nav.style.width = "200px";
+    nav.style.opacity = 1;
   }
-
-  $("#settings-button").on("click.show", openSettings);
-
-  elem.click(function(e) {
-    e.stopPropagation();
-  });
-
-});
+}
 </script>
 </body>
 <style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), progress !important;}</style>
