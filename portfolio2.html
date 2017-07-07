@@ -3,15 +3,45 @@
 <head>
 <title>Kris - Portfolio</title>
 <link href="https://image.ibb.co/f8c5OQ/rosered.gif" rel="icon" type="image/x-icon" />
-<style> ::-webkit-scrollbar {width: 0px;} </style>
+<style>
+::-webkit-scrollbar {width: 0px;}
+
+body {font-family: "Lato", sans-serif;transition: background-color .5s;}
+.sidenav {height: 100%;width: 0;position: fixed;z-index: 1;top: 0;left: 0;background-color: #111;overflow-x: hidden;transition: 0.5s;padding-top: 60px;}
+.sidenav a {padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;}
+.sidenav a:hover, .offcanvas a:focus{color: #f1f1f1;}
+#main {transition: margin-left .5s;padding: 16px;}
+@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}.sidenav a {font-size: 18px;}}
+.sidebar {position: -webkit-sticky;position: sticky;top: 15px;}
+.container {display: inline-block;cursor: pointer;}
+.bar1, .bar2, .bar3 {width: 35px;height: 5px;background-color: #333;margin: 6px 0;transition: 0.4s;}
+.change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;transform: rotate(-45deg) translate(-9px, 6px) ;}
+.change .bar2 {opacity: 0;}
+.change .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px) ;transform: rotate(45deg) translate(-8px, -8px) ;}
+</style>
 </head>
 <body>
+    
 <!--header photo, need to add the arrows at the bottom that will scroll when clicked-->
-  
 <img src="http://i.imgur.com/I9WyvuG.jpg" alt="header" style="padding: 0;display: block;margin: 0 auto;max-height: 100%;max-width: 100%;">
 <br>
- 
-<!--.cons and links (change the sizes to vary later, also change so that when it gets clicked,
+
+<div id="mySidenav" class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<!--menu button. 3 bars are the lines in the icon.-->
+<div class="container sidebar" onclick="myFunction(this);togNav();" id="main">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+
+<!--icons and links (change the sizes to vary later, also change so that when it gets clicked,
 the info page pops up, also add menu and to top button, find a way to add larger left and right margins)-->
 <!--sizing works for all shapes! add new items to the top of the list so it's sorted chronologically-->
  
@@ -32,8 +62,21 @@ the info page pops up, also add menu and to top button, find a way to add larger
 
 
 
-
-
+<script>
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+function togNav() {
+  var nav = document.getElementById("mySidenav");
+  if (nav.style.width == '250px') {
+    nav.style.width = '0';
+    nav.style.opacity = 0;
+  } else {
+    nav.style.width = "250px";
+    nav.style.opacity = 1;
+  }
+}
+</script>
 </body>
 <style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), progress !important;}</style>
 </html>
