@@ -18,6 +18,16 @@ body {font-family: "Lato", sans-serif;transition: background-color .5s;}
 .change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;transform: rotate(-45deg) translate(-9px, 6px) ;}
 .change .bar2 {opacity: 0;}
 .change .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px) ;transform: rotate(45deg) translate(-8px, -8px) ;}
+    .scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: url('icon_top.png') no-repeat;
+    background-color: #000;
 </style>
 </head>
 <body>
@@ -62,7 +72,7 @@ the info page pops up, also add menu and to top button, find a way to add larger
 
 
 
-
+<a href="#" class="scrollup">Scroll</a>
 <script>
 function myFunction(x) {
     x.classList.toggle("change");
@@ -77,9 +87,26 @@ function togNav() {
     nav.style.opacity = 1;
   }
 }
-document.body.scrollTop = document.documentElement.scrollTop = 0;
 
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+});
 </script>
 </body>
-<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), progress !important;}</style>
+
 </html>
