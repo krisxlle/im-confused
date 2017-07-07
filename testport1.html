@@ -12,7 +12,7 @@ body {font-family: "Lato", sans-serif;transition: background-color .5s;}
 .sidenav a:hover, .offcanvas a:focus{color: #f1f1f1;}
 #main {transition: margin-left .5s;padding: 16px;}
 @media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}.sidenav a {font-size: 18px;}}
-.sidebar {position: -webkit-sticky;position: sticky;top: 15px;}
+.sidebar {position: -webkit-sticky;position: sticky;top: 15px;left:15px;}
 .container {display: inline-block;cursor: pointer;}
 .bar1, .bar2, .bar3 {width: 35px;height: 5px;background-color: #333;margin: 6px 0;transition: 0.4s;}
 .change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;transform: rotate(-45deg) translate(-9px, 6px) ;}
@@ -34,14 +34,14 @@ body {font-family: "Lato", sans-serif;transition: background-color .5s;}
 </div>
 
 <!--menu button. 3 bars are the lines in the icon.-->
-<div class="container sidebar" style="left:15px" onclick="myFunction(this);togNav();" id="main">
+<div class="container sidebar" onclick="myFunction(this);togNav();" id="main">
   <div class="bar1"></div>
   <div class="bar2"></div>
   <div class="bar3"></div>
 </div>
 
 
-<!--.cons and links (change the sizes to vary later, also change so that when it gets clicked,
+<!--icons and links (change the sizes to vary later, also change so that when it gets clicked,
 the info page pops up, also add menu and to top button, find a way to add larger left and right margins)-->
 <!--sizing works for all shapes! add new items to the top of the list so it's sorted chronologically-->
  
