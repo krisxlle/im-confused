@@ -18,6 +18,10 @@ body {font-family: "Lato", sans-serif;transition: background-color .5s;}
 .change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;transform: rotate(-45deg) translate(-9px, 6px) ;}
 .change .bar2 {opacity: 0;}
 .change .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px) ;transform: rotate(45deg) translate(-8px, -8px) ;}
+.chev1{width: 35px;height: 5px;background-color: #333;margin: 6px 0;-webkit-transform: rotate(45deg);}
+.chev2{width: 35px;height: 5px;background-color: #333;margin: 6px 0;-webkit-transform: rotate(-45deg);}
+.chev3{width: 35px;height: 5px;background-color: #333;margin: 6px 0;-webkit-transform: rotate(45deg);}
+.chev4{width: 35px;height: 5px;background-color: #333;margin: 6px 0;-webkit-transform: rotate(-45deg);}
 </style>
 </head>
 <body>
@@ -40,9 +44,14 @@ body {font-family: "Lato", sans-serif;transition: background-color .5s;}
   <div class="bar3"></div>
 </div>
 
-   <!-- <div style="width: 35px;height:5 px;backgroundcolor:#333;margin:6px;bottom:15px;right:10px"></div>-->
+<div class="container sidebar" onclick="togNav();" id="main">
+  <div class="chev1"></div>
+  <div class="chev2"></div>
+  <div class="chev3"></div>
+  <div class="chev4"></div>
+</div>
     
-   <a onclick="scroll(0,0)"><img src="http://i.imgur.com/NZql0Hv.png" style="width:3%;height:3%;bottom:15px;right:15px;"></a>
+   <!--<a onclick="scroll(0,0)"><img src="http://i.imgur.com/NZql0Hv.png" style="width:3%;height:3%;bottom:15px;right:15px;"></a>-->
 
 <!--icons and links (change the sizes to vary later, also change so that when it gets clicked,
 the info page pops up, also add menu and to top button, find a way to add larger left and right margins)-->
